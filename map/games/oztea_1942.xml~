@@ -3843,6 +3843,12 @@
       <option name="conditions" value="conditionAttachment_Germans_5_Allies_Do_Not_Control_Sweden:conditionAttachment_Germans_5_Sweden_Axis_Or_ProAxis_Or_Strict"/>
       <option name="conditionType" value="AND"/>
     </attachment>
+    <attachment name="conditionAttachmentTurn1" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="rounds" value="1"/>
+    </attachment>
+    <attachment name="conditionAttachmentTurn6" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="rounds" value="6"/>
+    </attachment>
     <!-- Russians Conditions -->
     <attachment name="conditionAttachment_Russians_1_Convoy_Clear" attachTo="Russians" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
       <option name="enemyExclusionTerritories" value="125 Sea Zone" count="1"/>
@@ -3853,6 +3859,9 @@
       <option name="directOwnershipTerritories" value="Archangel" count="1"/>
       <option name="alliedExclusionTerritories" value="original"/>
       <option name="atWarPlayers" value="Germans:Italians" count="1"/>
+    </attachment>
+    <attachment name="Oz1942Tech" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="gameProperty" value="Oztea 1942 Tech"/>
     </attachment>
     <!-- Japanese Conditions -->
     <attachment name="conditionAttachmentAllies_Conquer_Japanese_Islands" attachTo="British" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
@@ -4156,11 +4165,46 @@
       <option name="resource" value="PUs"/>
       <option name="resourceCount" value="5"/>
     </attachment>
+    <attachment name="triggerAttachmentAdvArtillery" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn1:Oz1942Tech"/>
+      <option name="tech" value="improvedArtillerySupport"/>
+      <option name="uses" value="1"/>
+    </attachment>
+    <attachment name="triggerAttachmentSuperSub" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn1:Oz1942Tech"/>
+      <option name="tech" value="superSub"/>
+      <option name="uses" value="1"/>
+    </attachment>
+    <attachment name="triggerAttachmentRocket" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn3:Oz1942Tech"/>
+      <option name="tech" value="rocket"/>
+      <option name="uses" value="1"/>
+    </attachment>
+    <attachment name="triggerAttachmentImprovedInf" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn3:Oz1942Tech"/>
+      <option name="tech" value="Improved_Mech_Inf"/>
+      <option name="uses" value="1"/>
+    </attachment>
+    <attachment name="triggerAttachmentJets" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn6:Oz1942Tech"/>
+      <option name="tech" value="jetPower"/>
+      <option name="uses" value="1"/>
+    </attachment>
     <!-- Russians Triggers -->
     <attachment name="triggerAttachment_Russians_1_Lend_Lease" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="trigger" value="conditionAttachment_Russians_1_Lend_Lease"/>
       <option name="resource" value="PUs"/>
       <option name="resourceCount" value="5"/>
+    </attachment>
+    <attachment name="triggerAttachmentAdvArtilleryUSSR" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn3:Oz1942Tech"/>
+      <option name="tech" value="improvedArtillerySupport"/>
+      <option name="uses" value="1"/>
+    </attachment>
+    <attachment name="triggerAttachmentIncreasedFactryUSSR" attachTo="Russians" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn6:Oz1942Tech"/>
+      <option name="tech" value="increasedFactoryProduction"/>
+      <option name="uses" value="1"/>
     </attachment>
     <!-- Japanese Triggers -->
     <!-- OLD Kamikaze trigger:
@@ -4254,7 +4298,27 @@
       <option name="uses" value="1"/>
       <option name="when" value="after:gameInitDelegate"/>
     </attachment>
+    <attachment name="triggerAttachmentSuperSubJPN" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn1:Oz1942Tech"/>
+      <option name="tech" value="superSub"/>
+      <option name="uses" value="1"/>
+    </attachment>
+    <attachment name="triggerAttachmentLongRangeAirJPN" attachTo="Japanese" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn3:Oz1942Tech"/>
+      <option name="tech" value="longRangeAir"/>
+      <option name="uses" value="1"/>
+    </attachment>
     <!-- British Triggers -->
+    <attachment name="triggerAttachmentRadar" attachTo="British" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn1:Oz1942Tech"/>
+      <option name="tech" value="aARadar"/>
+      <option name="uses" value="1"/>
+    </attachment>
+    <attachment name="triggerAttachmentParas" attachTo="British" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn3:Oz1942Tech"/>
+      <option name="tech" value="Airborne_Forces"/>
+      <option name="uses" value="1"/>
+    </attachment>
     <!-- ANZAC Triggers -->
     <attachment name="triggerAttachment_ANZAC_1_Control_Original_And_Malaya" attachTo="ANZAC" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
       <option name="trigger" value="conditionAttachmentANZAC_At_War_With_Japanese:conditionAttachment_ANZAC_1_Original:conditionAttachment_ANZAC_1_Malaya"/>
@@ -4372,6 +4436,26 @@
       <option name="placement" value="Western United States:factory_major"/>
       <option name="uses" value="1"/>
       <option name="when" value="after:americansPolitics"/>
+    </attachment>
+    <attachment name="triggerAttachmentWarbondsUSA" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn1:Oz1942Tech"/>
+      <option name="tech" value="warBonds"/>
+      <option name="uses" value="1"/>
+    </attachment>
+    <attachment name="triggerAttachmentParasUSA" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn3:Oz1942Tech"/>
+      <option name="tech" value="Airborne_Forces"/>
+      <option name="uses" value="1"/>
+    </attachment>
+    <attachment name="triggerAttachmentHvyBmbrsUSA" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn6:Oz1942Tech"/>
+      <option name="tech" value="heavyBomber"/>
+      <option name="uses" value="1"/>
+    </attachment>
+    <attachment name="triggerAttachmentLongRangeAirUSA" attachTo="Americans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="conditions" value="conditionAttachmentTurn6:Oz1942Tech"/>
+      <option name="tech" value="longRangeAir"/>
+      <option name="uses" value="1"/>
     </attachment>
     <!-- French Triggers -->
     <attachment name="triggerAttachment_Germans_Conquer_France" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
@@ -4760,6 +4844,17 @@
       <option name="relationshipChange" value="Americans:Mongolians:anyNeutral:War"/>
       <option name="when" value="before:americansPolitics"/>
       <option name="uses" value="1"/>
+    </attachment>
+    <!-- NOTIFICATIONs -->
+    <attachment name="conditionAttachmentTurn1Check" attachTo="Germans" javaClass="games.strategy.triplea.attachments.RulesAttachment" type="player">
+      <option name="alliedOwnershipTerritories" value="Germany" count="1"/>
+      <option name="rounds" value="1"/>
+    </attachment>
+    <attachment name="triggerAttachment1note" attachTo="Germans" javaClass="games.strategy.triplea.attachments.TriggerAttachment" type="player">
+      <option name="trigger" value="conditionAttachmentTurn1Check"/>
+      <option name="notification" value="R01"/>
+      <option name="uses" value="1"/>
+      <option name="when" value="before:germansTech"/>
     </attachment>
     <!-- Player Attachments -->
     <attachment name="playerAttachment" attachTo="Mongolians" javaClass="games.strategy.triplea.attachments.PlayerAttachment" type="player">
@@ -5986,7 +6081,6 @@
             <unitPlacement unitType="carrier" territory="76 Sea Zone" quantity="1" owner="British"/>
             <unitPlacement unitType="cruiser" territory="76 Sea Zone" quantity="1" owner="British"/>
             <unitPlacement unitType="infantry" territory="Mozambique" quantity="2" owner="Neutral_True"/>
-            <unitPlacement unitType="submarine" territory="118 Sea Zone" quantity="1" owner="Germans"/>
             <unitPlacement unitType="transport" territory="95 Sea Zone" quantity="1" owner="Germans"/>
             <unitPlacement unitType="submarine" territory="95 Sea Zone" quantity="1" owner="Germans"/>
             <unitPlacement unitType="cruiser" territory="95 Sea Zone" quantity="2" owner="Italians"/>
@@ -5996,8 +6090,6 @@
             <unitPlacement unitType="infantry" territory="Saudi Arabia" quantity="2" owner="Neutral_True"/>
             <unitPlacement unitType="infantry" territory="Switzerland" quantity="2" owner="Neutral_True"/>
             <unitPlacement unitType="submarine" territory="106 Sea Zone" quantity="1" owner="Germans"/>
-            <unitPlacement unitType="destroyer" territory="106 Sea Zone" quantity="1" owner="British"/>
-            <unitPlacement unitType="transport" territory="106 Sea Zone" quantity="1" owner="British"/>
             <unitPlacement unitType="transport" territory="94 Sea Zone" quantity="1" owner="Italians"/>
             <unitPlacement unitType="submarine" territory="94 Sea Zone" quantity="1" owner="Italians"/>
             <unitPlacement unitType="transport" territory="89 Sea Zone" quantity="1" owner="Americans"/>
@@ -6029,7 +6121,6 @@
             <unitPlacement unitType="transport" territory="114 Sea Zone" quantity="1" owner="Germans"/>
             <unitPlacement unitType="destroyer" territory="114 Sea Zone" quantity="1" owner="Germans"/>
             <unitPlacement unitType="battleship" territory="114 Sea Zone" quantity="1" owner="Germans"/>
-            <unitPlacement unitType="destroyer" territory="71 Sea Zone" quantity="1" owner="British"/>
             <unitPlacement unitType="transport" territory="81 Sea Zone" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="infantry" territory="Brazil" quantity="3" owner="Americans"/>
             <unitPlacement unitType="infantry" territory="Venezuela" quantity="2" owner="Neutral_True"/>
@@ -6040,7 +6131,6 @@
             <unitPlacement unitType="infantry" territory="Sweden" quantity="6" owner="Neutral_True"/>
             <unitPlacement unitType="cruiser" territory="115 Sea Zone" quantity="1" owner="Russians"/>
             <unitPlacement unitType="submarine" territory="115 Sea Zone" quantity="1" owner="Russians"/>
-            <unitPlacement unitType="submarine" territory="103 Sea Zone" quantity="1" owner="Germans"/>
             <unitPlacement unitType="infantry" territory="Yugoslavia" quantity="1" owner="Germans"/>
             <unitPlacement unitType="infantry" territory="Yugoslavia" quantity="2" owner="Italians"/>
             <unitPlacement unitType="infantry" territory="Spain" quantity="6" owner="Neutral_True"/>
@@ -6067,9 +6157,9 @@
       <resourceGiven player="Japanese" resource="SuicideAttackTokens" quantity="6"/>
     </resourceInitialize>
     <relationshipInitialize>
-      <relationship player1="Germans" player2="Russians" type="Neutrality" roundValue="1"/>
+      <relationship player1="Germans" player2="Russians" type="War" roundValue="1"/>
       <relationship player1="Germans" player2="Japanese" type="Allied" roundValue="1"/>
-      <relationship player1="Germans" player2="Americans" type="Neutrality" roundValue="1"/>
+      <relationship player1="Germans" player2="Americans" type="War" roundValue="1"/>
       <relationship player1="Germans" player2="Chinese" type="Neutrality" roundValue="1"/>
       <relationship player1="Germans" player2="British" type="War" roundValue="1"/>
       <relationship player1="Germans" player2="UK_Pacific" type="War" roundValue="1"/>
@@ -6082,47 +6172,47 @@
       <relationship player1="Germans" player2="Neutral_True" type="Strict_Neutral" roundValue="1"/>
       <relationship player1="Germans" player2="Mongolians" type="Strict_Neutral" roundValue="1"/>
       <relationship player1="Russians" player2="Japanese" type="Neutrality" roundValue="1"/>
-      <relationship player1="Russians" player2="Americans" type="Neutrality" roundValue="1"/>
+      <relationship player1="Russians" player2="Americans" type="Allied" roundValue="1"/>
       <relationship player1="Russians" player2="Chinese" type="Neutrality" roundValue="1"/>
-      <relationship player1="Russians" player2="British" type="Neutrality" roundValue="1"/>
-      <relationship player1="Russians" player2="UK_Pacific" type="Neutrality" roundValue="1"/>
-      <relationship player1="Russians" player2="Italians" type="Neutrality" roundValue="1"/>
-      <relationship player1="Russians" player2="ANZAC" type="Neutrality" roundValue="1"/>
+      <relationship player1="Russians" player2="British" type="Allied" roundValue="1"/>
+      <relationship player1="Russians" player2="UK_Pacific" type="Allied" roundValue="1"/>
+      <relationship player1="Russians" player2="Italians" type="War" roundValue="1"/>
+      <relationship player1="Russians" player2="ANZAC" type="Allied" roundValue="1"/>
       <relationship player1="Russians" player2="French" type="Neutrality" roundValue="1"/>
-      <relationship player1="Russians" player2="Dutch" type="Neutrality" roundValue="1"/>
-      <relationship player1="Russians" player2="Neutral_Axis" type="Neutrality" roundValue="1"/>
-      <relationship player1="Russians" player2="Neutral_Allies" type="Neutrality" roundValue="1"/>
+      <relationship player1="Russians" player2="Dutch" type="Allied" roundValue="1"/>
+      <relationship player1="Russians" player2="Neutral_Axis" type="Unfriendly_Neutral" roundValue="1"/>
+      <relationship player1="Russians" player2="Neutral_Allies" type="Friendly_Neutral" roundValue="1"/>
       <relationship player1="Russians" player2="Neutral_True" type="Strict_Neutral" roundValue="1"/>
       <relationship player1="Russians" player2="Mongolians" type="Strict_Neutral" roundValue="1"/>
-      <relationship player1="Japanese" player2="Americans" type="Neutrality" roundValue="1"/>
+      <relationship player1="Japanese" player2="Americans" type="War" roundValue="1"/>
       <relationship player1="Japanese" player2="Chinese" type="War" roundValue="1"/>
       <relationship player1="Japanese" player2="British" type="Neutrality" roundValue="1"/>
-      <relationship player1="Japanese" player2="UK_Pacific" type="Neutrality" roundValue="1"/>
+      <relationship player1="Japanese" player2="UK_Pacific" type="War" roundValue="1"/>
       <relationship player1="Japanese" player2="Italians" type="Allied" roundValue="1"/>
-      <relationship player1="Japanese" player2="ANZAC" type="Neutrality" roundValue="1"/>
-      <relationship player1="Japanese" player2="French" type="Neutrality" roundValue="1"/>
-      <relationship player1="Japanese" player2="Dutch" type="Neutrality" roundValue="1"/>
+      <relationship player1="Japanese" player2="ANZAC" type="War" roundValue="1"/>
+      <relationship player1="Japanese" player2="French" type="War" roundValue="1"/>
+      <relationship player1="Japanese" player2="Dutch" type="War" roundValue="1"/>
       <relationship player1="Japanese" player2="Neutral_Axis" type="Friendly_Neutral" roundValue="1"/>
       <relationship player1="Japanese" player2="Neutral_Allies" type="Unfriendly_Neutral" roundValue="1"/>
       <relationship player1="Japanese" player2="Neutral_True" type="Strict_Neutral" roundValue="1"/>
       <relationship player1="Japanese" player2="Mongolians" type="Strict_Neutral" roundValue="1"/>
-      <relationship player1="Americans" player2="Chinese" type="Neutrality" roundValue="1"/>
-      <relationship player1="Americans" player2="British" type="Neutrality" roundValue="1"/>
-      <relationship player1="Americans" player2="UK_Pacific" type="Neutrality" roundValue="1"/>
-      <relationship player1="Americans" player2="Italians" type="Neutrality" roundValue="1"/>
-      <relationship player1="Americans" player2="ANZAC" type="Neutrality" roundValue="1"/>
-      <relationship player1="Americans" player2="French" type="Neutrality" roundValue="1"/>
-      <relationship player1="Americans" player2="Dutch" type="Neutrality" roundValue="1"/>
-      <relationship player1="Americans" player2="Neutral_Axis" type="Neutrality" roundValue="1"/>
-      <relationship player1="Americans" player2="Neutral_Allies" type="Neutrality" roundValue="1"/>
+      <relationship player1="Americans" player2="Chinese" type="Allied" roundValue="1"/>
+      <relationship player1="Americans" player2="British" type="Allied" roundValue="1"/>
+      <relationship player1="Americans" player2="UK_Pacific" type="Allied" roundValue="1"/>
+      <relationship player1="Americans" player2="Italians" type="War" roundValue="1"/>
+      <relationship player1="Americans" player2="ANZAC" type="Allied" roundValue="1"/>
+      <relationship player1="Americans" player2="French" type="Allied" roundValue="1"/>
+      <relationship player1="Americans" player2="Dutch" type="Allied" roundValue="1"/>
+      <relationship player1="Americans" player2="Neutral_Axis" type="Unfriendly_Neutral" roundValue="1"/>
+      <relationship player1="Americans" player2="Neutral_Allies" type="Friendly_Neutral" roundValue="1"/>
       <relationship player1="Americans" player2="Neutral_True" type="Strict_Neutral" roundValue="1"/>
       <relationship player1="Americans" player2="Mongolians" type="Strict_Neutral" roundValue="1"/>
-      <relationship player1="Chinese" player2="British" type="Neutrality" roundValue="1"/>
+      <relationship player1="Chinese" player2="British" type="Allied" roundValue="1"/>
       <relationship player1="Chinese" player2="UK_Pacific" type="Concordant" roundValue="1"/>
       <relationship player1="Chinese" player2="Italians" type="Neutrality" roundValue="1"/>
-      <relationship player1="Chinese" player2="ANZAC" type="Neutrality" roundValue="1"/>
-      <relationship player1="Chinese" player2="French" type="Neutrality" roundValue="1"/>
-      <relationship player1="Chinese" player2="Dutch" type="Neutrality" roundValue="1"/>
+      <relationship player1="Chinese" player2="ANZAC" type="Allied" roundValue="1"/>
+      <relationship player1="Chinese" player2="French" type="Allied" roundValue="1"/>
+      <relationship player1="Chinese" player2="Dutch" type="Allied" roundValue="1"/>
       <relationship player1="Chinese" player2="Neutral_Axis" type="Unfriendly_Neutral" roundValue="1"/>
       <relationship player1="Chinese" player2="Neutral_Allies" type="Friendly_Neutral" roundValue="1"/>
       <relationship player1="Chinese" player2="Neutral_True" type="Strict_Neutral" roundValue="1"/>
@@ -6240,7 +6330,7 @@
     <property name="Use Triggers" value="true" editable="false">
       <boolean/>
     </property>
-    <property name="Tech Development" value="false" editable="true">
+    <property name="Tech Development" value="true" editable="true">
       <boolean/>
     </property>
     <property name="Remove All Tech Tokens At End Of Turn" value="true" editable="true">
@@ -6539,6 +6629,9 @@
     <property name="Limit SBR Damage To Factory Production" value="false" editable="false">
       <boolean/>
     </property>
+    <property name="Oztea 1942 Tech" value="false" editable="true">
+      <boolean/>
+    </property>
     <!-- Neutrals related -->
     <property name="neutralCharge" value="0" editable="false">
       <number min="0" max="9999999"/>
@@ -6559,7 +6652,25 @@
 <b>Global 1940 Second Edition</b><br>
 <br>
 <b>Credits:</b> Bung, Veqryn<br><br>
+<br>
+<b>Oztea 1942 Global</b><br>
+<br>
+  <br><em>
+    Following victory after victory, the German war machine pushes onward. Deep thrusts cut into the heart of the Soviet Union, threatening vital points across a broad front. Industrial centers such as Moscow and Leningrad are besieged, as the German army prepares an offensive to cross the Volga and conquer the oil fields to the south. The United Kingdom, ally to the Soviets, finds itself being strangled by a fleet of German U-boats, marauding the North Atlantic and sinking vital supplies from the Empire. Worse yet, the Japanese Empire has declared war on the western allies, and struck at the American Navy in a sneak attack at Pearl Harbor. In the chaos, their empire has expanded and absorbed the various colonies in the South Pacific. Their forces have pushed themselves to the limit, but now threaten bastions of western power such as India and Australia. The war has become global, and the great powers must engage in a total war, for the world stands on a razors edge, will the Axis war machine roll onward to triumph? Or can the allied powers stem the tide, and push back the enemies of the free world? The year is 1942, and the world is at war..</em><br>
+<br>
+Alpha +3 (2nd Edition) Rules are in effect, All National Objectives and special rules.
+Politically, the game begins as if it were the FIFTH turn. All powers follow any relevant restrictions. (Neutrality, etc)
 
+Special Rule for Soviet naval units: Soviet Pacific naval units must remain adjacent to original Soviet territory while the Soviet Union is considered neutral in the Pacific Theater.<br><br>
+<b>OPTIONAL 1942 TECHNOLOGY PACKAGE</b><br> 
+As the war dragged on, breakthroughs in military technology changed the face of warfare. As an optional rule, some powers start with, or will gain automatic access to certain technologies on certain game turns. All players must agree to use the optional package. Research attempts can be made normally by all powers, re-roll as normal if you already have the indicated breakthrough. You gain access to these breakthroughs before the Research and Development phase on the indicated turn.<br><br>
+
+Germany - (Turn 1) Advanced Artillery & Super Subs, (Turn 3) Rockets & Advanced Mechanized Infantry, (Turn 6) Jet Fighters<br><br>
+Japan - (Turn 1) Super Subs, (Turn 3) Long Range Aircraft
+<br><br>
+United States - (Turn 1) War Bonds, (Turn 3) Paratroopers, (Turn 6) Heavy Bombers & Long Range Aircraft<br><br>
+Soviet Union - (Turn 3) Advanced Artillery, (Turn 6) Increased Factory Production<br><br>
+United Kingdom - (Turn 1) Radar, (Turn 3) Paratroopers<br><br><br>
 <b>Note</b><br>
 This game uses the latest Global 1940 2nd Edition (successor to Alpha +3) rules, as posted on Larry's website.<br>
 To blitz move mech_infantry with armour, you must click on them both at the same time (use CTRL to create waypoints).<br>

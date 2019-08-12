@@ -5420,7 +5420,7 @@
             <territoryOwner territory="India" owner="UK_Pacific"/>
             <territoryOwner territory="Malaya" owner="Japanese"/>
             <territoryOwner territory="Borneo" owner="Japanese"/>
-            <territoryOwner territory="Kwangtung" owner="UK_Pacific"/>
+            <territoryOwner territory="Kwangtung" owner="Japanese"/>
             <territoryOwner territory="Queensland" owner="ANZAC"/>
             <territoryOwner territory="Victoria" owner="ANZAC"/>
             <territoryOwner territory="New Britain" owner="Japanese"/>
@@ -5674,8 +5674,9 @@
             <unitPlacement unitType="infantry" territory="Malaya" quantity="1" owner="Japanese"/>
             <unitPlacement unitType="mech_infantry" territory="Malaya" quantity="1" owner="Japanese"/>
             <unitPlacement unitType="infantry" territory="Borneo" quantity="2" owner="Japanese"/>
-            <unitPlacement unitType="infantry" territory="Kwangtung" quantity="2" owner="British"/>
-            <unitPlacement unitType="harbour" territory="Kwangtung" quantity="1" owner="UK_Pacific"/>
+	    <unitPlacement unitType="infantry" territory="Kwangtung" quantity="1" owner="Japanese"/>
+	    <unitPlacement unitType="artillery" territory="Kwangtung" quantity="1" owner="Japanese"/>
+	    <unitPlacement unitType="harbour" territory="Kwangtung" quantity="1" owner="Japanese"/>
             <unitPlacement unitType="infantry" territory="Queensland" quantity="2" owner="ANZAC"/>
             <unitPlacement unitType="fighter" territory="Queensland" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="airfield" territory="Queensland" quantity="1" owner="ANZAC"/>
@@ -6081,7 +6082,6 @@
             <unitPlacement unitType="carrier" territory="76 Sea Zone" quantity="1" owner="British"/>
             <unitPlacement unitType="cruiser" territory="76 Sea Zone" quantity="1" owner="British"/>
             <unitPlacement unitType="infantry" territory="Mozambique" quantity="2" owner="Neutral_True"/>
-            <unitPlacement unitType="submarine" territory="118 Sea Zone" quantity="1" owner="Germans"/>
             <unitPlacement unitType="transport" territory="95 Sea Zone" quantity="1" owner="Germans"/>
             <unitPlacement unitType="submarine" territory="95 Sea Zone" quantity="1" owner="Germans"/>
             <unitPlacement unitType="cruiser" territory="95 Sea Zone" quantity="2" owner="Italians"/>
@@ -6091,8 +6091,6 @@
             <unitPlacement unitType="infantry" territory="Saudi Arabia" quantity="2" owner="Neutral_True"/>
             <unitPlacement unitType="infantry" territory="Switzerland" quantity="2" owner="Neutral_True"/>
             <unitPlacement unitType="submarine" territory="106 Sea Zone" quantity="1" owner="Germans"/>
-            <unitPlacement unitType="destroyer" territory="106 Sea Zone" quantity="1" owner="British"/>
-            <unitPlacement unitType="transport" territory="106 Sea Zone" quantity="1" owner="British"/>
             <unitPlacement unitType="transport" territory="94 Sea Zone" quantity="1" owner="Italians"/>
             <unitPlacement unitType="submarine" territory="94 Sea Zone" quantity="1" owner="Italians"/>
             <unitPlacement unitType="transport" territory="89 Sea Zone" quantity="1" owner="Americans"/>
@@ -6124,7 +6122,6 @@
             <unitPlacement unitType="transport" territory="114 Sea Zone" quantity="1" owner="Germans"/>
             <unitPlacement unitType="destroyer" territory="114 Sea Zone" quantity="1" owner="Germans"/>
             <unitPlacement unitType="battleship" territory="114 Sea Zone" quantity="1" owner="Germans"/>
-            <unitPlacement unitType="destroyer" territory="71 Sea Zone" quantity="1" owner="British"/>
             <unitPlacement unitType="transport" territory="81 Sea Zone" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="infantry" territory="Brazil" quantity="3" owner="Americans"/>
             <unitPlacement unitType="infantry" territory="Venezuela" quantity="2" owner="Neutral_True"/>
@@ -6135,7 +6132,6 @@
             <unitPlacement unitType="infantry" territory="Sweden" quantity="6" owner="Neutral_True"/>
             <unitPlacement unitType="cruiser" territory="115 Sea Zone" quantity="1" owner="Russians"/>
             <unitPlacement unitType="submarine" territory="115 Sea Zone" quantity="1" owner="Russians"/>
-            <unitPlacement unitType="submarine" territory="103 Sea Zone" quantity="1" owner="Germans"/>
             <unitPlacement unitType="infantry" territory="Yugoslavia" quantity="1" owner="Germans"/>
             <unitPlacement unitType="infantry" territory="Yugoslavia" quantity="2" owner="Italians"/>
             <unitPlacement unitType="infantry" territory="Spain" quantity="6" owner="Neutral_True"/>
