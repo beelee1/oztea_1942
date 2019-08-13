@@ -5420,7 +5420,7 @@
             <territoryOwner territory="India" owner="UK_Pacific"/>
             <territoryOwner territory="Malaya" owner="Japanese"/>
             <territoryOwner territory="Borneo" owner="Japanese"/>
-            <territoryOwner territory="Kwangtung" owner="UK_Pacific"/>
+            <territoryOwner territory="Kwangtung" owner="Japanese"/>
             <territoryOwner territory="Queensland" owner="ANZAC"/>
             <territoryOwner territory="Victoria" owner="ANZAC"/>
             <territoryOwner territory="New Britain" owner="Japanese"/>
@@ -5674,8 +5674,9 @@
             <unitPlacement unitType="infantry" territory="Malaya" quantity="1" owner="Japanese"/>
             <unitPlacement unitType="mech_infantry" territory="Malaya" quantity="1" owner="Japanese"/>
             <unitPlacement unitType="infantry" territory="Borneo" quantity="2" owner="Japanese"/>
-            <unitPlacement unitType="infantry" territory="Kwangtung" quantity="2" owner="British"/>
-            <unitPlacement unitType="harbour" territory="Kwangtung" quantity="1" owner="UK_Pacific"/>
+	    <unitPlacement unitType="infantry" territory="Kwangtung" quantity="1" owner="Japanese"/>
+	    <unitPlacement unitType="artillery" territory="Kwangtung" quantity="1" owner="Japanese"/>
+	    <unitPlacement unitType="harbour" territory="Kwangtung" quantity="1" owner="Japanese"/>
             <unitPlacement unitType="infantry" territory="Queensland" quantity="2" owner="ANZAC"/>
             <unitPlacement unitType="fighter" territory="Queensland" quantity="1" owner="ANZAC"/>
             <unitPlacement unitType="airfield" territory="Queensland" quantity="1" owner="ANZAC"/>
