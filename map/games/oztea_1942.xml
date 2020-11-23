@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Oztea 1942" version="4.2"/>
+  <info name="Oztea 1942" version="1.2"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8"/>
   <diceSides value="6"/>
@@ -6709,7 +6709,7 @@ Politically, the game begins as if it were the FIFTH turn. All powers follow any
 
 Special Rule for Soviet naval units: Soviet Pacific naval units must remain adjacent to original Soviet territory while the Soviet Union is considered neutral in the Pacific Theater.<br><br>
 <b>OPTIONAL 1942 TECHNOLOGY PACKAGE</b><br> 
-As the war dragged on, breakthroughs in military technology changed the face of warfare. As an optional rule, some powers start with, or will gain automatic access to certain technologies on certain game turns. All players must agree to use the optional package. Research attempts can be made normally by all powers, re-roll as normal if you already have the indicated breakthrough. You gain access to these breakthroughs before the Research and Development phase on the indicated turn.<br><br>
+As the war dragged on, breakthroughs in military technology changed the face of warfare. As an optional rule, some powers start with, or will gain automatic access to certain technologies on certain game turns. All players must agree to use the optional package. Research attempts can be made normally by all powers, re-roll as normal if you already have the indicated breakthrough. You gain access to these breakthroughs before the Research and Development phase on the indicated turn.<br><
 
 Germany - (Turn 1) Advanced Artillery & Super Subs, (Turn 3) Rockets & Advanced Mechanized Infantry, (Turn 6) Jet Fighters<br><br>
 Japan - (Turn 1) Super Subs, (Turn 3) Long Range Aircraft
@@ -6721,6 +6721,14 @@ United Kingdom - (Turn 1) Radar, (Turn 3) Paratroopers<br><br><br>
 This game uses the latest Global 1940 2nd Edition (successor to Alpha +3) rules, as posted on Larry's website.<br>
 To blitz move mech_infantry with armour, you must click on them both at the same time (use CTRL to create waypoints).<br>
 Paratroopers tech enables a second combat movement phase which happens right after the first combat movement phase, and the second one only allowes movement of paratrooping infantry.<br>
+<br>
+<br>Change Log:
+<br>
+<br>1.2
+<br>Fix Game Version. 11-23-2020.
+<br>
+<br>1.1
+<br>Fix Original Owners Territories. 11-22-2020.
 <br>
 
 <b>Disclaimer</b><br>
@@ -6998,12 +7006,6 @@ These changes to units are things other than price/movement which you can see in
 <b>Credits to Veqryn for almost all related Engine code that allows this map to work.</b>
 <br><br><hr><br>
 <br>Change Log:
-<br>
-<br>4.2
-<br>Fix Game Version. 11-23-2020.
-<br>
-<br>4.1
-<br>Fix Original Owners Territories. 11-22-2020.
 <br>
 <br>4.0
 <br>Corrected UK_Pacific handling for US territories
