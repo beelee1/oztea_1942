@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE game SYSTEM "game.dtd">
 <game>
-  <info name="Oztea 1942" version="1.1"/>
+  <info name="Oztea 1942" version="4.2"/>
   <loader javaClass="games.strategy.triplea.TripleA"/>
   <triplea minimumVersion="1.8"/>
   <diceSides value="6"/>
@@ -6998,6 +6998,9 @@ These changes to units are things other than price/movement which you can see in
 <b>Credits to Veqryn for almost all related Engine code that allows this map to work.</b>
 <br><br><hr><br>
 <br>Change Log:
+<br>
+<br>4.2
+<br>Fix Game Version. 11-23-2020.
 <br>
 <br>4.1
 <br>Fix Original Owners Territories. 11-22-2020.
